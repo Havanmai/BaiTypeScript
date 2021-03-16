@@ -1,0 +1,23 @@
+{
+  "name": "baitypescript",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "systemjs": "^6.8.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Havanmai/BaiTypeScript.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Havanmai/BaiTypeScript/issues"
+  },
+  "homepage": "https://github.com/Havanmai/BaiTypeScript#readme"
+}

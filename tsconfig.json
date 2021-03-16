@@ -1,0 +1,17 @@
+{
+    "compilerOptions": { 
+        "target": "es2020", 
+       "outDir": "mjs",
+       "removeComments": false,
+       "watch": true,
+       "sourceMap": true,
+       "module": "system"
+    },
+    "exclude": [
+        "css",
+        "js",
+        "assets",
+        "mjs"
+
+    ]
+}

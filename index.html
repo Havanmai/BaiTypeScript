@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="assets/css/style.css" >
+</head>
+<body onload="validateForm()">
+    <div class="container mt-5">
+        <div class="header-body d-flex  justify-content-center" >
+            <h1> Registration </h1>
+        </div>
+        <div class="contact  mt-5">
+           
+        </div>
+        <div class="main-content d-flex justify-content-center">
+            <form  onrload="loadform();" >
+                <table>
+                    <tr >
+                        <td >
+                            <label> UserName <span class="icon-force">*</span> :</label>
+                        </td>
+                        <td colspan="3">
+                            <input id="txtusername" name="username" onblur="valTextUserName()" />
+                        </td>
+                        <td >
+                          <label id="lblusername" class="lbl"> </label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label>
+                                Password  <span class="icon-force">*</span> :
+                            </label>
+                        </td>
+                        <td colspan="3">
+                            <input id="txtpassword" name="password" type="password" onblur="valTextPassWord()" />
+                        </td>
+                        <td >
+                            <label id="lblpassword" class="lbl"> </label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label>
+                                Confirm Password  <span class="icon-force">*</span> :
+                            </label>
+                        </td>
+                        <td colspan="3">
+                            <input id="txtconfirmpass" name="confirmpass" type="password" onblur="valTextConfirmPassWord()" />
+                        </td>
+                        <td >
+                            <label id="lblconfirmpass" class="lbl"> </label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td >
+                            <label>Full Name  <span class="icon-force">*</span> :</label>
+                        </td>
+                        <td colspan="3">
+                                <input id="txtfullname" name="fullname" onblur="valTextFullName()"  />
+                        </td>
+                        <td >
+                            <label id="lblfullname" class="lbl"> </label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label> Date Of Birth  <span class="icon-force">*</span>  :</label>
+                        </td>
+                        <td colspan="3">
+                            <input id="txtdateofbirth" name="dateofbirth" type="date" onblur="valTextDate()" />
+                        </td>
+                        <td >
+                            <label id="lbldateofbirth" class="lbl"> </label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label> Email  <span class="icon-force">*</span> :</label>
+                        </td>
+                        <td colspan="3">
+                            <input id="txtemail" name="email"  onblur="valTextEmail()"/>
+                        </td>
+                        <td >
+                            <label id="lblemail" class="lbl"> </label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label> Phone Number  <span class="icon-force">*</span> :</label>
+                        </td>
+                        <td colspan="3">
+                            <input id="txtphonenumber" name="phonenumber"  onblur="valTextPhoneNumber()"/>
+                        </td>
+                        <td >
+                            <label id="lblphonenumber" class="lbl"> </label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label> Link FaceBook  <span class="icon-force">*</span> :</label>
+                        </td>
+                        <td colspan="3">
+                            <input id="txtlinkfb" name="linkfb"  />
+                        </td>
+                        <td >
+                            <label id="lbllinkfb" class="lbl"> </label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label>  City  <span class="icon-force">*</span> :</label>
+                        </td>
+                        <td>
+                            <select id="txtcity" name="city"  onchange="changeTextCity(this)">
+                               <!--  <option value="0">
+                                    City
+                                </option>
+                               <option value="1">
+                                   Hà Nội
+                               </option>
+                               <option value="2">
+                                TP Hồ Chí Minh
+                            </option> -->
+                            </select>
+                        </td>
+                        <td>
+                            <label>District  <span class="icon-force">*</span> :</label>
+                        </td>
+                        <td>
+                                <select id="txtdistrict" name="district" >
+                                  
+                                </select>
+                        </td>
+                        <td>
+                            <label id="lbldistrict" class="lbl"> </label>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+        <div class="button-submit d-flex " style="margin-left:60%;margin-top: 5%;">
+             <div class="mr-5">
+                <button type="submit" onclick="onSubmit()" id="button-submit">Submit</button>
+             </div>
+             <div>
+                <button type="reset">Reset</button>
+             </div>
+        </div>
+    </div>
+    <div class="container mt-5">
+        <div class="d-flex  justify-content-center"><h1>List Customer</h1> </div>
+        <table class=" table table-border">
+            <tr>
+                <th>STT</th>
+                <th>UserName</th>
+                <th>Password</th>
+                <th>FullName</th>
+                <th>Date Of Birth</th>
+                <th>Email</th>
+                <th>PhoneNumber</th>
+                <th>LinkFacebook</th>
+                <th>City</th>
+                <th>District</th>
+            </tr>
+            <tbody id="listcustomer">
+
+            </tbody>
+        </table>
+    </div>
+<!-- <script src="assets/js/validate-form.js"></script>
+<script src="mjs/system.js"></script>
+<script>
+    System.import('mjs/add.js');
+</script> -->
+<script src="assets/js/validate-form.js"></script>
+<script src="mjs/system.js"></script>
+<!-- <script type="systemjs-importmap">
+{
+  "imports": {
+    "lodash": "https://unpkg.com/lodash@4.17.10/lodash.js"
+  }
+}
+</script> -->
+<!-- Alternatively:
+<script type="systemjs-importmap" src="path/to/map.json" crossorigin="anonymous">
+-->
+<!-- <script type="systemjs-module" src="mjs/add.js"></script> -->
+
+<script>
+    System.import('./mjs/add.js')
+</script> 
+</body>
+</html>
